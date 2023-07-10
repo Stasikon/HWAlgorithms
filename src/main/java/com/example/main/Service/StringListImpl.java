@@ -121,12 +121,13 @@ public class StringListImpl implements StringList{
     @Override
     public int lastIndexOf(String item) {
         notNull(item);
-        for (int i = size-1; i >=0 ; i--) {
-            if(arrayString[i],equals(item)){
+        int index = -1;
+        for (int i = size - 1; i >= 0; i--) {
+            if (arrayString[i].equals(item)) {
                 return i;
             }
         }
-        return item;
+        return index;
     }
 
     @Override
@@ -181,6 +182,8 @@ public class StringListImpl implements StringList{
             }
             return listArrays;
         }
-    }
+
+
+}
 
 
